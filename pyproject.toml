@@ -1,0 +1,21 @@
+[project]
+name = "sar-sea-ice-segmentation"
+version = "0.1.0" 
+description = "Multimodal SAR sea ice and water semantic segmentation using THOR and TerraTorch"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "thor-terratorch-ext @ git+https://github.com/FM4CS/thor_terratorch_ext@v0.2.1",
+    "albumentations==2.0.8",
+    "ipykernel",
+    "ipywidgets",
+    "jupyterlab",
+    "matplotlib",
+    "numpy",
+    "pillow",
+    "rasterio==1.5.0",
+    "scipy",
+    "tensorboard",
+    "tifffile",
+]
