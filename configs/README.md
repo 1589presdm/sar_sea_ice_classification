@@ -52,7 +52,7 @@ thor_v1_base
 vit_small_patch16_224.dino
 ```
 
-THOR uses flexible pathc size `yaml flexivit_patch_size_seqs`.
+THOR uses flexible pathc size `flexivit_patch_size_seqs`.
 
 The DINO backbone uses patch size 16. 
 
