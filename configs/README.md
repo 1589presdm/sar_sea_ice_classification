@@ -120,5 +120,5 @@ ground_cover = crop_size x GSD
 ```
 
 Useful source files:
-[SAR GSD suffixes](https://github.com/FM4CS/thor_terratorch_ext/blob/main/thor_terratorch_ext/datasets/utils.py#L4)
-[ViT backbone input parameters](https://github.com/FM4CS/thor_terratorch_ext/blob/v0.2.1/thor_terratorch_ext/models/backbones/thor_vit.py)
+- [SAR GSD suffixes](https://github.com/FM4CS/thor_terratorch_ext/blob/main/thor_terratorch_ext/datasets/utils.py#L4)
+- [ViT backbone input parameters](https://github.com/FM4CS/thor_terratorch_ext/blob/v0.2.1/thor_terratorch_ext/models/backbones/thor_vit.py)
