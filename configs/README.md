@@ -80,3 +80,45 @@ DINO 18 x 18 - upsampled to 36 x 36
 THOR  36 x 36  - downsampled to 18 x 18
 DINO 18 x 18 - unchanged
 ```
+
+
+## THOR Ground cover and SAR GSD
+
+THOR uses `ground_covers` to define the physical ground coverage of the input crop in metres.
+
+For S1 SAR bands without GSD suffix, THOR assumes the default GSD - `10 m/pixel`
+
+For crop size 288 x 288 it gives:
+
+```text
+288 x 10 = 2880m
+
+ground_covers: 
+    - 2880
+```
+
+GDS is changend by adding suffix:
+
+```yaml
+backbone_model_bands:
+    - EW_HH_100(suffix)
+    - EW_HV_100(suffix)
+```
+
+THe same band names should be used consistently in:
+
+```yaml
+dataset_bands
+backbone_bands
+backbone_model_bands
+ ```
+
+If GSD suffix is used, ground_covers should be updated according to the physical size of the crop:
+
+```text
+ground_cover = crop_size x GSD
+```
+
+Useful source files:
+[SAR GSD suffixes](https://github.com/FM4CS/thor_terratorch_ext/blob/main/thor_terratorch_ext/datasets/utils.py#L4)
+[ViT backbone input parameters](https://github.com/FM4CS/thor_terratorch_ext/blob/v0.2.1/thor_terratorch_ext/models/backbones/thor_vit.py)
