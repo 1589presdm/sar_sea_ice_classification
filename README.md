@@ -22,7 +22,7 @@ The main derictories are:
 - `notebooks/` contains training and evaluation examples;
 - `data_preparation/` contains data preparation scripts;
 - `thor_extension/` proivede registrartion of the installed THOR TerraTorch extension.
-
+- `experiments/` contains an experimental configuration with increased number of crops and batches
 
 ## Installation
 
