@@ -81,6 +81,19 @@ THOR  36 x 36  - downsampled to 18 x 18
 DINO 18 x 18 - unchanged
 ```
 
+## Dataset stackability
+
+The configuration uses: `check_stackability`, this option checks whether samples in dataset split can be stacked into the same batch.
+
+This doesn't resize, crop or pad the imageы, it only adjusts batching when samples cannot be stacked together.
+
+For example:
+
+```yaml
+check_stackability: true
+```
+validation and test scenes can be processed one by one, while training can still use larger batches.
+
 
 ## THOR Ground cover and SAR GSD
 
