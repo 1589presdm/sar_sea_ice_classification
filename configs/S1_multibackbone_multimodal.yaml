@@ -38,7 +38,7 @@ data:
   class_path: terratorch.datamodules.GenericMultiModalDataModule
   init_args:
     task: segmentation
-    batch_size: 4
+    batch_size: 8
     num_workers: 0
     modalities:
       - S1
@@ -48,7 +48,7 @@ data:
     # Update dataset paths before running training.
     train_data_root:
       S1: /path/to/dataset/tif_images
-      DOPPLER:  /path/to/dataset/tif_doppler
+      DOPPLER: /path/to/dataset/tif_doppler
     train_label_data_root: /path/to/dataset/tif_mask
     val_data_root:
       S1:  /path/to/dataset/tif_images
@@ -69,7 +69,7 @@ data:
     no_label_replace: -1
     no_data_replace: 0
     concat_bands: true
-    check_stackability: false
+    check_stackability: true
     dataset_bands:
       S1:
         - EW_HH
