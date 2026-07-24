@@ -85,7 +85,7 @@ DINO 18 x 18 - unchanged
 
 The configuration uses: `check_stackability`, this option checks whether samples in dataset split can be stacked into the same batch.
 
-This doesn't resize, crop or pad the imageы, it only adjusts batching when samples cannot be stacked together.
+This doesn't resize, crop or pad the image, it only adjusts batching when samples cannot be stacked together.
 
 For example:
 
